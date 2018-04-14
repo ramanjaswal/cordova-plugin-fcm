@@ -13,8 +13,7 @@
 @implementation FCMPlugin
 
 static BOOL notificatorReceptorReady = NO;
-//static BOOL appInForeground = YES;
-static BOOL appInForeground = NO;
+static BOOL appInForeground = YES;
 
 static NSString *notificationCallback = @"FCMPlugin.onNotificationReceived";
 static NSString *tokenRefreshCallback = @"FCMPlugin.onTokenRefreshReceived";
@@ -128,7 +127,7 @@ static FCMPlugin *fcmPluginInstance;
     if (lastPush != nil) {
         [FCMPlugin.fcmPlugin notifyOfMessage:lastPush];
     }
-    //appInForeground = YES;
+    appInForeground = YES;
 }
 
 @end
