@@ -127,7 +127,7 @@ static FCMPlugin *fcmPluginInstance;
     if (lastPush != nil) {
         [FCMPlugin.fcmPlugin notifyOfMessage:lastPush];
     }
-    appInForeground = YES;
+    appInForeground = NO;
 }
 
 @end
